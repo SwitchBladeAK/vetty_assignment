@@ -1,0 +1,199 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #0052cc;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#board {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+#add-list {
+    background-color: #0052cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#add-list:hover {
+    background-color: #0065ff;
+}
+
+#lists-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.list {
+    background-color: #ebecf0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.list:hover {
+    transform: translateY(-5px);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.list-header input {
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    width: 80%;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.list-header input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.delete-list {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #6b778c;
+    transition: color 0.3s ease;
+}
+
+.delete-list:hover {
+    color: #172b4d;
+}
+
+.add-card {
+    background: none;
+    border: none;
+    color: #6b778c;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.add-card:hover {
+    background-color: #dfe1e6;
+}
+
+.card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card-header:focus {
+    outline: none;
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.card-desc {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    resize: none;
+}
+
+.card-desc:focus {
+    outline: none;
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.creation-time {
+    font-size: 12px;
+    color: #6b778c;
+}
+
+.delete-card {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b778c;
+    transition: color 0.3s ease;
+    align-self: flex-end;
+}
+
+.delete-card:hover {
+    color: #172b4d;
+}
+
+@media (max-width: 768px) {
+    #lists-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list {
+        width: 100%;
+        max-width: 400px;
+    }
+}
