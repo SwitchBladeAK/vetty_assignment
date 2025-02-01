@@ -33,8 +33,9 @@ function createList() {
 
     listTitle.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
-            e.preventDefault();
-            saveState();
+            e.preventDefault(); 
+            listTitle.blur();
+            saveState(); 
         }
     });
 
