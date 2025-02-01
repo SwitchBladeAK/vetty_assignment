@@ -31,6 +31,13 @@ function createList() {
     };
     list.appendChild(addCardButton);
 
+    listTitle.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            saveState();
+        }
+    });
+
     document.getElementById('lists-container').appendChild(list);
     return list;
 }
